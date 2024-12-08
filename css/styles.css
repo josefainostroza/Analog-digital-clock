@@ -174,3 +174,8 @@ body {
   border-radius: 100%;
   background-color: rgb(208, 208, 208)
 }
+
+.containerDateTime {
+  color: aliceblue;
+  font-size: 16px;
+}
