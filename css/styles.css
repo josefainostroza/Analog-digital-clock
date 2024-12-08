@@ -1,3 +1,10 @@
+:root {
+  --second-rotation: 0deg;
+  --minut-rotation: 0deg;
+  --hour-rotation: 0deg;
+
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,22 +12,165 @@
 html {
   scroll-behavior: smooth;
 }
+
 img {
   display: block;
   max-width: 100%;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 ul {
   list-style: none;
   padding-left: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
 body {
   margin: 0;
   font-family: sans-serif;
-  color: aliceblue;
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+
+.container {
+  position: relative;
+
+}
+
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  margin: 100px auto;
+
+}
+
+.number {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.number1 {
+  top: 30px;
+  left: 190px;
+}
+
+.number2 {
+  top: 67px;
+  left: 230px;
+}
+
+.number3 {
+  top: 120px;
+  left: 250px;
+}
+
+.number4 {
+  top: 185px;
+  left: 230px;
+}
+
+.number5 {
+  top: 230px;
+  left: 185px;
+}
+
+.number6 {
+  top: 245px;
+  left: 130px;
+}
+
+.number7 {
+  top: 240px;
+  left: 60px;
+}
+
+.number8 {
+  top: 200px;
+  left: 30px;
+}
+
+.number9 {
+  top: 130px;
+  left: 10px;
+}
+
+.number10 {
+  top: 60px;
+  left: 30px;
+}
+
+.number11 {
+  top: 30px;
+  left: 60px;
+}
+
+.number12 {
+  top: 10px;
+  left: 130px;
+}
+
+
+.handSeg {
+  position: absolute;
+  left: calc(50% - 1.5px);
+  top: 10px;
+  width: 3px;
+  height: 125px;
+  border-radius: 10px;
+  background-color: rgb(255, 14, 14);
+  transform-origin: bottom;
+  rotate: var(--second-rotation);
+  z-index: 1;
+}
+
+.handMin {
+  position: absolute;
+  left: calc(50% - 2.5px);
+  top: 35px;
+  width: 5px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  transform-origin: bottom;
+  rotate: var(--minut-rotation);
+  z-index: 1;
+}
+
+.handHour {
+  position: absolute;
+  left: calc(50% - 3px);
+  top: 48px;
+  width: 6px;
+  height: 85px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  transform-origin: bottom;
+  rotate: var(--hour-rotation);
+  z-index: 1;
+}
+
+.handHour::after {
+  content: '';
+  position: absolute;
+  top: 72px;
+  left: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: rgb(208, 208, 208)
 }
